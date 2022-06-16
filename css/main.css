@@ -3,6 +3,7 @@
 :root {
   --accent-color: #fb5a00;
   --background-color: #292929;
+  color-scheme: light only;
 }
 
 *,
