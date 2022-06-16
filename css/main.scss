@@ -959,32 +959,21 @@ nav {
     }
     @keyframes pulse {
       0% {
-        transform: scale(0.6) translate(-100%, 0);
+        transform: scale(0.6) translate(-100%, -220%);
         opacity: 0;
       }
 
       10% {
-        transform: scale(0.8) translate(-80%, 0);
+        transform: scale(0.8) translate(-80%, -179%);
         opacity: 0.9;
       }
 
       100% {
-        transform: scale(1) translate(-65%, 0);
+        transform: scale(1) translate(-65%, -142%);
         opacity: 0;
       }
     }
-    .pulseContainer {
-      display: none;
-    }
     .pulseContainer.pchover {
-      display: inline;
-      animation: pulse 1s ease-out infinite;
-      position: absolute;
-      left: 40%;
-      top: 0;
-      transform: translate(-65%, 0) scale(0.8);
-      transition: 0.3s;
-      text-align: center;
       width: 14rem;
     }
     .proj,

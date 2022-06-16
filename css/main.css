@@ -1478,53 +1478,39 @@ nav li a {
   }
   @-webkit-keyframes pulse {
     0% {
-      -webkit-transform: scale(0.6) translate(-100%, 0);
-              transform: scale(0.6) translate(-100%, 0);
+      -webkit-transform: scale(0.6) translate(-100%, -220%);
+              transform: scale(0.6) translate(-100%, -220%);
       opacity: 0;
     }
     10% {
-      -webkit-transform: scale(0.8) translate(-80%, 0);
-              transform: scale(0.8) translate(-80%, 0);
+      -webkit-transform: scale(0.8) translate(-80%, -179%);
+              transform: scale(0.8) translate(-80%, -179%);
       opacity: 0.9;
     }
     100% {
-      -webkit-transform: scale(1) translate(-65%, 0);
-              transform: scale(1) translate(-65%, 0);
+      -webkit-transform: scale(1) translate(-65%, -142%);
+              transform: scale(1) translate(-65%, -142%);
       opacity: 0;
     }
   }
   @keyframes pulse {
     0% {
-      -webkit-transform: scale(0.6) translate(-100%, 0);
-              transform: scale(0.6) translate(-100%, 0);
+      -webkit-transform: scale(0.6) translate(-100%, -220%);
+              transform: scale(0.6) translate(-100%, -220%);
       opacity: 0;
     }
     10% {
-      -webkit-transform: scale(0.8) translate(-80%, 0);
-              transform: scale(0.8) translate(-80%, 0);
+      -webkit-transform: scale(0.8) translate(-80%, -179%);
+              transform: scale(0.8) translate(-80%, -179%);
       opacity: 0.9;
     }
     100% {
-      -webkit-transform: scale(1) translate(-65%, 0);
-              transform: scale(1) translate(-65%, 0);
+      -webkit-transform: scale(1) translate(-65%, -142%);
+              transform: scale(1) translate(-65%, -142%);
       opacity: 0;
     }
   }
-  .projects .pulseContainer {
-    display: none;
-  }
   .projects .pulseContainer.pchover {
-    display: inline;
-    -webkit-animation: pulse 1s ease-out infinite;
-            animation: pulse 1s ease-out infinite;
-    position: absolute;
-    left: 40%;
-    top: 0;
-    -webkit-transform: translate(-65%, 0) scale(0.8);
-            transform: translate(-65%, 0) scale(0.8);
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    text-align: center;
     width: 14rem;
   }
   .projects .proj,
