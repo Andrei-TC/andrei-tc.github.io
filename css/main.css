@@ -53,6 +53,7 @@ body .container::before {
   top: 18rem;
   left: -22rem;
   opacity: 30%;
+  z-index: 1;
 }
 
 section {
