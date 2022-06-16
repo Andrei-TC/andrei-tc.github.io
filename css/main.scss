@@ -929,39 +929,7 @@ nav {
         font-size: 2rem;
       }
     }
-    .unhover:hover + .proj1 {
-      //transform: translate(-60%, 40%);
-      animation: proj1anim 0.3s;
-      & + .proj2 {
-        //transform: translate(-140%, -95%);
-        animation: proj2anim 0.3s;
-        & + .proj3 {
-          //transform: translate(-220%, -50%);
-          animation: proj3anim 0.6s;
-          & + .proj4 {
-            //transform: translate(20%, -95%);
-            animation: proj4anim 0.3s;
-            & + .proj5 {
-              //transform: translate(100%, -140%);
-              animation: proj5anim 0.6s;
-              & + .proj6 {
-                //transform: translate(180%, -95%);
-                animation: proj6anim 0.9s;
-                & ~ .projp1 {
-                  animation: projp1anim 0.3s;
-                  & ~ .projp2 {
-                    animation: projp2anim 0.6s;
-                    & ~ .projp3 {
-                      animation: projp3anim 0.9s;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+
     .proj.hovered + .proj1 {
       transform: translate(-65%, 55%) scale(0.8);
       & + .proj2 {
@@ -1033,9 +1001,9 @@ nav {
       left: 40%;
       top: 0;
       transform: translate(-65%, 0) scale(0.8);
-      transition: 0.3s;
       text-align: center;
       width: 14rem;
+      animation: none;
     }
     .proj1,
     .proj2,

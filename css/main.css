@@ -1440,42 +1440,6 @@ nav li a {
     z-index: 2;
     font-size: 2rem;
   }
-  .projects .unhover:hover + .proj1 {
-    -webkit-animation: proj1anim 0.3s;
-            animation: proj1anim 0.3s;
-  }
-  .projects .unhover:hover + .proj1 + .proj2 {
-    -webkit-animation: proj2anim 0.3s;
-            animation: proj2anim 0.3s;
-  }
-  .projects .unhover:hover + .proj1 + .proj2 + .proj3 {
-    -webkit-animation: proj3anim 0.6s;
-            animation: proj3anim 0.6s;
-  }
-  .projects .unhover:hover + .proj1 + .proj2 + .proj3 + .proj4 {
-    -webkit-animation: proj4anim 0.3s;
-            animation: proj4anim 0.3s;
-  }
-  .projects .unhover:hover + .proj1 + .proj2 + .proj3 + .proj4 + .proj5 {
-    -webkit-animation: proj5anim 0.6s;
-            animation: proj5anim 0.6s;
-  }
-  .projects .unhover:hover + .proj1 + .proj2 + .proj3 + .proj4 + .proj5 + .proj6 {
-    -webkit-animation: proj6anim 0.9s;
-            animation: proj6anim 0.9s;
-  }
-  .projects .unhover:hover + .proj1 + .proj2 + .proj3 + .proj4 + .proj5 + .proj6 ~ .projp1 {
-    -webkit-animation: projp1anim 0.3s;
-            animation: projp1anim 0.3s;
-  }
-  .projects .unhover:hover + .proj1 + .proj2 + .proj3 + .proj4 + .proj5 + .proj6 ~ .projp1 ~ .projp2 {
-    -webkit-animation: projp2anim 0.6s;
-            animation: projp2anim 0.6s;
-  }
-  .projects .unhover:hover + .proj1 + .proj2 + .proj3 + .proj4 + .proj5 + .proj6 ~ .projp1 ~ .projp2 ~ .projp3 {
-    -webkit-animation: projp3anim 0.9s;
-            animation: projp3anim 0.9s;
-  }
   .projects .proj.hovered + .proj1 {
     -webkit-transform: translate(-65%, 55%) scale(0.8);
             transform: translate(-65%, 55%) scale(0.8);
@@ -1578,10 +1542,10 @@ nav li a {
     top: 0;
     -webkit-transform: translate(-65%, 0) scale(0.8);
             transform: translate(-65%, 0) scale(0.8);
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
     text-align: center;
     width: 14rem;
+    -webkit-animation: none;
+            animation: none;
   }
   .projects .proj1,
   .projects .proj2,
