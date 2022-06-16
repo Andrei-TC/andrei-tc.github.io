@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="color-scheme" content="light only">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio - New Version</title>
     <link rel="stylesheet" href="css/main.css" />
@@ -22,6 +21,14 @@
         <div class="hero-title">
           <h1>Andrei-T. Cojocaru</h1>
           <p>Front-End Web Developer. UX/UI Designer.</p>
+        </div>
+        <div class="darkmode">
+          <input type="checkbox" class="checkbox dm" id="checkbox" checked>
+          <label for="checkbox" class="label">
+            <i>L</i>
+            <i>D</i>
+            <div class="ball"></div>
+          </label>
         </div>
       </section>
       <section class="afterHero">
@@ -285,8 +292,8 @@
       <section class="projects" id="projects">
         <div class="proj unhover">
           <h1>Front-End</h1>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 300 300" width="100%" height="300" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g stroke-width="2" stroke="#FB5A00" fill="#353535">
+          <svg  viewBox="0 0 300 300" width="100%" height="300">
+            <g stroke-width="2" stroke="#FB5A00" fill="">
               <polygon class="hex" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
           </svg>
             </g>
@@ -410,7 +417,7 @@
         <p>Here are some projects that I'm working on it as we speak.</p>
             <div class="horrorGame-card">
               <h2>A horror game</h2>
-              <p>A short game about a guy that... sorry, no spoilers :)</p>
+              <p class="onGoingDesc">A short game about a guy that... sorry, no spoilers :)</p>
               <p class="outro-thing">Party or solo:</p>
               <ol><li>7 June 2022</li></ol>
               <p class="outro-thing">Started on:</p>

@@ -5,7 +5,31 @@ const proj = document.querySelector(".proj");
 const pulse = document.querySelector(".pulseContainer");
 const project = document.querySelector(".projects");
 const pp = project.querySelectorAll(".pp");
+const r = document.querySelector(":root");
+var checkboxDM = document.getElementById("checkbox");
+
 console.log(pp);
+
+checkboxDM.addEventListener("change", () => {
+  if (checkboxDM.classList.contains("lm")) {
+    setToDarkMode();
+  } else setToLightMode();
+});
+function setToLightMode() {
+  r.style.setProperty("--background-color", "#EEEEEE");
+  r.style.setProperty("--text-color", "#4E4E48");
+  r.style.setProperty("--card-bg-color", "#C0C0C0");
+  checkboxDM.classList.add("lm");
+  checkboxDM.classList.remove("dm");
+}
+function setToDarkMode() {
+  r.style.setProperty("--background-color", "#292929");
+  r.style.setProperty("--text-color", "#fff");
+  r.style.setProperty("--card-bg-color", "#1b1b1b");
+  checkboxDM.classList.add("dm");
+  checkboxDM.classList.remove("lm");
+}
+
 if (navigator.userAgent.match(/samsung/i)) {
   alert(
     "You are using a defective browser (Samsung Internet) that " +
