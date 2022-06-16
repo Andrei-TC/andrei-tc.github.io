@@ -933,7 +933,7 @@ nav li a {
 
 .outro {
   height: 100%;
-  padding-top: 2rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -975,7 +975,7 @@ nav li a {
 }
 
 .outro .horrorGame-card {
-  padding: 2rem;
+  padding: 1rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-row-align: center;
@@ -983,7 +983,7 @@ nav li a {
   background: #1b1b1b;
   border: 2px var(--accent-color) solid;
   width: Min(25rem, 80vw);
-  height: 40rem;
+  height: 35rem;
   text-align: center;
 }
 
@@ -1034,9 +1034,11 @@ nav li a {
 }
 
 .footer {
-  margin-top: 10rem;
+  position: absolute;
+  margin-top: 1rem;
   width: 100%;
-  height: 50%;
+  height: 3rem;
+  bottom: 0;
   background: #1b1b1b;
   border-top: 2px var(--accent-color) solid;
   display: -ms-grid;
@@ -1044,6 +1046,12 @@ nav li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer p {
+  padding: 0;
+  margin: 0;
+  margin-inline: auto;
 }
 
 .qvActive :nth-of-type(1) {
@@ -1597,10 +1605,10 @@ nav li a {
     opacity: 0;
   }
   .outro {
-    padding-top: 10rem;
+    padding-top: 0rem;
   }
   .footer {
-    margin-top: 5rem;
+    margin-top: 0rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
