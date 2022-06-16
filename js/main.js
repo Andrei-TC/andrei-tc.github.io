@@ -6,6 +6,15 @@ const pulse = document.querySelector(".pulseContainer");
 const project = document.querySelector(".projects");
 const pp = project.querySelectorAll(".pp");
 console.log(pp);
+if (navigator.userAgent.match(/samsung/i)) {
+  alert(
+    "You are using a defective browser (Samsung Internet) that " +
+      "might not be configured to display this website properly. " +
+      "You should consider using a proper standards-compliant " +
+      "browser instead. \n\n" +
+      "We recommend using Firefox, Microsoft Edge, or Google Chrome."
+  );
+}
 window.onclick = (e) => {
   var parent = e.target.children[1].parentNode.parentNode.parentNode.parentNode;
   if (parent == qvList) {
