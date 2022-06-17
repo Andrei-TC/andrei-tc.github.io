@@ -1020,22 +1020,31 @@ nav {
 
     .proj.hovered + .proj1 {
       transform: translate(-65%, 55%) scale(0.8);
+      animation: none;
       & + .proj2 {
         transform: translate(0, 27.5%) scale(0.8);
+        animation: none;
         & + .proj3 {
           transform: translate(-65%, -55%) scale(0.8);
+          animation: none;
           & + .proj4 {
             transform: translate(0, 82.5%) scale(0.8);
+            animation: none;
             & + .proj5 {
               transform: translate(0, 137.5%) scale(0.8);
+              animation: none;
               & + .proj6 {
                 transform: translate(-65%, 165%) scale(0.8);
+                animation: none;
                 & ~ .projp1 {
-                  transform: translate(0, 0%) scale(0.8);
+                  transform: translate(5%, 20%) scale(0.8);
+                  animation: none;
                   & ~ .projp2 {
-                    transform: translate(-70%, 230%) scale(0.8);
+                    transform: translate(-70%, 270%) scale(0.8);
+                    animation: none;
                     & ~ .projp3 {
-                      transform: translate(5%, 660%) scale(0.8);
+                      transform: translate(5%, 900%) scale(0.8);
+                      animation: none;
                     }
                   }
                 }
@@ -1130,7 +1139,7 @@ nav {
     .projp3 {
       width: 24ch;
       color: var(--text-color);
-      font-weight: 100;
+      font-weight: 300;
       letter-spacing: 0.2rem;
       z-index: 1;
       opacity: 1;
