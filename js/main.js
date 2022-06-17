@@ -40,7 +40,9 @@ if (navigator.userAgent.match(/samsung/i)) {
   );
 }
 window.onclick = (e) => {
+  if (e.target.children[1] == undefined) return;
   var parent = e.target.children[1].parentNode.parentNode.parentNode.parentNode;
+
   if (parent == qvList) {
     var qvCurrentActive = document.querySelector(".qvActive");
     if ((e.target.children[1].classList = qvCurrentActive)) {
@@ -88,6 +90,9 @@ proj.onmouseover = function () {
     () => proj.classList.remove("unhover"),
     pulse.classList.remove("pchover")
   );
+  for (let i = 0; i < pp.length; i++) {
+    pp[i].classList.remove("pp");
+  }
 };
 proj.addEventListener("click", () => {
   if (proj.classList.contains("hovered")) return;
