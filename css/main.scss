@@ -1045,6 +1045,39 @@ nav {
         }
       }
     }
+    .unhover:hover + .proj1 {
+      //transform: translate(-60%, 40%);
+      animation: none;
+      & + .proj2 {
+        //transform: translate(-140%, -95%);
+        animation: none;
+        & + .proj3 {
+          //transform: translate(-220%, -50%);
+          animation: none;
+          & + .proj4 {
+            //transform: translate(20%, -95%);
+            animation: none;
+            & + .proj5 {
+              //transform: translate(100%, -140%);
+              animation: none;
+              & + .proj6 {
+                //transform: translate(180%, -95%);
+                animation: none;
+                & ~ .projp1 {
+                  animation: none;
+                  & ~ .projp2 {
+                    animation: none;
+                    & ~ .projp3 {
+                      animation: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     @keyframes pulse {
       0% {
         transform: scale(0.6) translate(-100%, -220%);
