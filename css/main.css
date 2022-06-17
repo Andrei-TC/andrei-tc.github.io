@@ -78,6 +78,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -142,6 +143,7 @@ i {
 }
 
 nav {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,6 +186,7 @@ nav li a {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
+  height: 100%;
 }
 
 .hero-title h1 {
