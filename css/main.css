@@ -453,6 +453,10 @@ nav li a {
 }
 
 .career .career-block .career-items li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: var(--text-color);
   width: 100%;
   cursor: pointer;
