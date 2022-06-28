@@ -52,7 +52,11 @@ const Contact = () => {
           <button className="btn contact-send-btn" type="submit">
             Send
           </button>
-          <input type="hidden" name="_next" value="#home"></input>
+          <input
+            type="hidden"
+            name="_next"
+            value="https://andrei-tc.github.io/"
+          ></input>
           <input
             type="hidden"
             name="_subject"
