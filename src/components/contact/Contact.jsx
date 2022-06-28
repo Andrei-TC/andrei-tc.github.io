@@ -58,6 +58,7 @@ const Contact = () => {
             className="btn contact-send-btn"
             type="submit"
             onClick={() => setSentMessage(!sentMessage)}
+            {...(sentMessage && (style = "background: orange"))}
           >
             Send
           </button>
@@ -73,12 +74,12 @@ const Contact = () => {
           ></input>
           <input type="hidden" name="_captcha" value="false"></input>
         </form>
-        {sentMessage && (
+        {/* {sentMessage && (
           <EmailSend
             setSentMessage={setSentMessage}
             sentMessage={sentMessage}
           />
-        )}
+        )} */}
       </div>
     </div>
   );
