@@ -432,6 +432,7 @@ body {
 
 // Contact
 .contact-container {
+  position: relative;
   text-align: center;
   margin-bottom: 2rem;
   h3 {
@@ -532,6 +533,54 @@ body {
         background: transparent;
       }
     }
+  }
+  .emailSend-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    top: 5rem;
+    bottom: 0;
+    width: 20rem;
+    height: 10rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px var(--clr-p) solid;
+    border-right: 1px var(--clr-p) solid;
+    border-bottom: 1px var(--clr-p) solid;
+    background-color: var(--clr-bg);
+    P {
+      color: var(--clr-w);
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    button {
+      padding: 1rem;
+      border-radius: 5px;
+      background: transparent;
+      border: 1px var(--clr-p) solid;
+      animation: transform 1s ease-in-out;
+      &:hover {
+        background-color: var(--clr-p);
+        & a {
+          color: var(--clr-bg);
+        }
+      }
+    }
+    a {
+      padding: 1rem;
+      color: var(--clr-p);
+    }
+  }
+}
+@keyframes sentMessage {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 // Footer

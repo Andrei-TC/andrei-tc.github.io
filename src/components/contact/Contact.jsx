@@ -1,12 +1,17 @@
 import { contactData } from "./contactData";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import ContactElement from "./ContactElement";
+import EmailSend from "./EmailSend";
 
 const Contact = () => {
   const [contact, setContact] = useState();
+  const [sentMessage, setSentMessage] = useState(false);
   useEffect(() => {
     setContact(contactData);
   }, []);
+  useLayoutEffect(() => {
+    setSentMessage(sentMessage);
+  }, [sentMessage]);
   return (
     <div className="contact-container" id="contact">
       <h3>Contact me</h3>
@@ -49,21 +54,31 @@ const Contact = () => {
             placeholder="Your message"
             aria-required
           ></textarea>
-          <button className="btn contact-send-btn" type="submit">
+          <button
+            className="btn contact-send-btn"
+            type="submit"
+            onClick={() => setSentMessage(!sentMessage)}
+          >
             Send
           </button>
-          <input
-            type="hidden"
-            name="_next"
-            value="https://andrei-tc.github.io/"
-          ></input>
           <input
             type="hidden"
             name="_subject"
             value="Portfolio message"
           ></input>
+          <input
+            type="hidden"
+            name="_subject"
+            value="https://andrei-tc.github.io/#contact"
+          ></input>
           <input type="hidden" name="_captcha" value="false"></input>
         </form>
+        {sentMessage && (
+          <EmailSend
+            setSentMessage={setSentMessage}
+            sentMessage={sentMessage}
+          />
+        )}
       </div>
     </div>
   );
