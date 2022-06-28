@@ -39,20 +39,20 @@ const Contact = () => {
             name="name"
             id="name"
             placeholder="Your name"
-            aria-required
+            required
           />
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Your email"
-            aria-required
+            required
           />
           <textarea
             name="message"
             id="message"
             placeholder="Your message"
-            aria-required
+            required
           ></textarea>
           <button
             className="btn contact-send-btn"
