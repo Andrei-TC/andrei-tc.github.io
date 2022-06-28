@@ -68,7 +68,7 @@ const Contact = () => {
           ></input>
           <input
             type="hidden"
-            name="_subject"
+            name="_next"
             value="https://andrei-tc.github.io/#contact"
           ></input>
           <input type="hidden" name="_captcha" value="false"></input>
