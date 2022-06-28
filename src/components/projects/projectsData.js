@@ -20,7 +20,7 @@ export let projectsData = [
     name: "Random advice generator",
     imageMobile: "./images/advice-generator-mobile.png",
     description:
-      "An interactive random advice gadget. (the api won't work if the user taps on the `generate` button before 2 seconds past from the last tap)(recomended on mobile devices)",
+      "An interactive random advice gadget. (the API won't work if the user taps on the `generate` button before 2 seconds past from the last tap)(recommended on mobile devices)",
     technology: [sass, html, css, js],
     liveLink:
       "https://andrei-tc.github.io/GitHub/challenges/advice-generator-app-main/",
@@ -43,7 +43,7 @@ export let projectsData = [
     name: "Preview chat application",
     imageMobile: "./images/preview-chat-app-mobile.png",
     description:
-      "A CSS oriented  project. This project putted my CSS skills to the test. Finding the problems was the first step, but after I managed to create a efficient solution for the secific problems, the project went smoothly. - Static website",
+      "A CSS oriented  project. This project putted my CSS skills to the test. Finding the problems was the first step, but after I managed to create a efficient solution for the specific problems, the project went smoothly. - Static website",
     technology: [sass, html, css],
     liveLink:
       "https://andrei-tc.github.io/GitHub/challenges/chat-app-css-illustration-master/",

@@ -10,7 +10,7 @@ export let contactData = [
     icon: "./images/linkedin.png",
     kind: "LinkedIn",
     contact: "Messenger applicaiton",
-    link: "https://www.linkedin.com/in/andrei-tiberius-cojocaru-8a731323b/",
+    link: "https://www.linkedin.com/in/andrei-tiberius-cojocaru",
     btnText: "View profile",
   },
 ];
