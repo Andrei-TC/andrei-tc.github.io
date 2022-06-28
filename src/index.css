@@ -690,6 +690,7 @@ body {
 
 .contact-container .emailSend-container {
   position: fixed;
+  z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
