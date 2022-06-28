@@ -1,17 +1,58 @@
 import { contactData } from "./contactData";
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import ContactElement from "./ContactElement";
-import EmailSend from "./EmailSend";
 
 const Contact = () => {
-  const [contact, setContact] = useState();
+  const [contact, setContact] = useState([]);
   const [sentMessage, setSentMessage] = useState(false);
+  const [alreadySent, setAlreadySent] = useState(false);
+  const [disableSubmit, setDisableSubmit] = useState(true);
+  const [emailValid, setEmailValid] = useState({
+    email: "",
+    emailValid: false,
+  });
+  const [textValid, setTextValid] = useState({
+    text: "",
+    textValid: false,
+  });
+
+  function handleLocalStorageSent() {
+    setAlreadySent(true);
+    localStorage.setItem("emailSent", alreadySent);
+  }
+  function handleChangeEmail(e) {
+    const newEmailValid = e.target.value ? true : false;
+    setEmailValid({
+      email: e.target.value,
+      emailValid: newEmailValid,
+    });
+    let re = /^[ ]*([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})[ ]*$/i;
+    if (re.test(e.target.value)) {
+      if ((textValid.textValid && emailValid.emailValid) === true) {
+        setDisableSubmit(false);
+      }
+    } else return;
+  }
+  function handleChangeText(e) {
+    let newtextValid = e.target.value ? true : false;
+
+    setTextValid({
+      text: e.target.value,
+      textValid: newtextValid,
+    });
+    if ((textValid.textValid && emailValid.emailValid) === true) {
+      setDisableSubmit(false);
+    }
+  }
+
   useEffect(() => {
-    setContact(contactData);
-  }, []);
-  useLayoutEffect(() => {
     setSentMessage(sentMessage);
-  }, [sentMessage]);
+    setContact(contactData);
+    if (localStorage.getItem("emailSent", alreadySent)) {
+      setAlreadySent(true);
+    } else setAlreadySent(false);
+  }, [sentMessage, alreadySent]);
+
   return (
     <div className="contact-container" id="contact">
       <h3>Contact me</h3>
@@ -38,29 +79,45 @@ const Contact = () => {
             type="text"
             name="name"
             id="name"
-            placeholder="Your name"
+            placeholder={!textValid.textValid ? "*Your name" : "Your name"}
+            value={textValid.text}
+            className={!textValid.textValid ? "required" : ""}
+            onChange={(e) => handleChangeText(e)}
             required
           />
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="Your email"
+            placeholder={!emailValid.emailValid ? "*Your email" : "Your email"}
+            value={emailValid.email}
+            className={!emailValid.emailValid ? "required" : ""}
+            onChange={(e) => handleChangeEmail(e)}
             required
           />
           <textarea
             name="message"
             id="message"
-            placeholder="Your message"
-            required
+            placeholder={alreadySent ? "Send another message" : "Your message"}
           ></textarea>
           <button
-            className="btn contact-send-btn"
+            className={
+              sentMessage
+                ? "btn contact-send-btn btn-progress"
+                : "btn contact-send-btn"
+            }
             type="submit"
-            onClick={() => setSentMessage(!sentMessage)}
-            {...(sentMessage && (style = "background: orange"))}
+            onClick={() => {
+              setSentMessage(!sentMessage);
+              handleLocalStorageSent();
+            }}
+            disabled={disableSubmit}
           >
-            Send
+            {sentMessage
+              ? "In progress..."
+              : alreadySent
+              ? "Send again"
+              : "Send"}
           </button>
           <input
             type="hidden"
@@ -74,12 +131,6 @@ const Contact = () => {
           ></input>
           <input type="hidden" name="_captcha" value="false"></input>
         </form>
-        {/* {sentMessage && (
-          <EmailSend
-            setSentMessage={setSentMessage}
-            sentMessage={sentMessage}
-          />
-        )} */}
       </div>
     </div>
   );
