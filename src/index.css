@@ -393,6 +393,14 @@ body {
   background-color: transparent;
 }
 
+.projects-container .project-action-btn .project-btn-code::before {
+  content: "<";
+}
+
+.projects-container .project-action-btn .project-btn-code::after {
+  content: ">";
+}
+
 .projects-container .project-action-btn .project-btn-code:hover {
   color: var(--clr-bg);
   -webkit-box-shadow: 0 0 3px var(--clr-p);
@@ -861,6 +869,16 @@ footer .top-icon {
   .contact-container .contact-form {
     margin: 0;
     margin-inline: auto;
+  }
+  .about-container > p {
+    max-width: 50ch;
+  }
+}
+
+@media (min-width: 1100px) {
+  .projects-container .projects-list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
 }
 /*# sourceMappingURL=index.css.map */

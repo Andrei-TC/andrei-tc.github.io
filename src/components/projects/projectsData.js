@@ -20,7 +20,7 @@ export let projectsData = [
     name: "Random advice generator",
     imageMobile: "./images/advice-generator-mobile.png",
     description:
-      "An interactive random advice gadget. (the api won't work if the user taps on the `generate` button before 2 seconds past from the last tap)",
+      "An interactive random advice gadget. (the api won't work if the user taps on the `generate` button before 2 seconds past from the last tap)(recomended on mobile devices)",
     technology: [sass, html, css, js],
     liveLink:
       "https://andrei-tc.github.io/GitHub/challenges/advice-generator-app-main/",

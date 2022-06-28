@@ -323,7 +323,12 @@ body {
       color: var(--clr-p);
       border: 1px var(--clr-p) solid;
       background-color: transparent;
-
+      &::before {
+        content: "<";
+      }
+      &::after {
+        content: ">";
+      }
       &:hover {
         color: var(--clr-bg);
         box-shadow: 0 0 3px var(--clr-p);
@@ -670,6 +675,18 @@ footer {
     .contact-form {
       margin: 0;
       margin-inline: auto;
+    }
+  }
+  .about-container {
+    & > p {
+      max-width: 50ch;
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .projects-container {
+    .projects-list {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
