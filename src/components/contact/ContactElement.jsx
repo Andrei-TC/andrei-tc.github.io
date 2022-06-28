@@ -4,7 +4,7 @@ const ContactElement = ({ icon, kind, contact, link, btnText }) => {
       <img src={icon} alt={kind} />
       <h4>{kind}</h4>
       <code>{contact}</code>
-      <a href={link} className="btn">
+      <a href={link} className="btn" target="_blank" rel="noreferrer">
         {btnText}
       </a>
     </li>
