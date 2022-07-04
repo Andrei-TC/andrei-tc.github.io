@@ -7,6 +7,15 @@ const html = "./images/html.png";
 export let projectsData = [
   {
     id: 1,
+    name: "Wordle clone",
+    imageMobile: "./images/wordle.png",
+    description: "A fully functional clone of the game wordle",
+    technology: [react, js, html, css, sass],
+    liveLink: "https://andrei-tc.github.io/wordle-clone/",
+    codeLink: "https://github.com/Andrei-TC/wordle-clone/",
+  },
+  {
+    id: 2,
     name: "Interactive comments section",
     imageMobile: "./images/comments-section-mobile.png",
     description:
@@ -16,7 +25,7 @@ export let projectsData = [
     codeLink: "https://github.com/Andrei-TC/comments-section",
   },
   {
-    id: 2,
+    id: 3,
     name: "Random advice generator",
     imageMobile: "./images/advice-generator-mobile.png",
     description:
@@ -28,7 +37,7 @@ export let projectsData = [
       "https://github.com/Andrei-TC/GitHub/tree/main/challenges/advice-generator-app-main",
   },
   {
-    id: 3,
+    id: 4,
     name: "Preview Huddle landing page",
     imageMobile: "./images/huddle-landing-page-mobile.png",
     description: "A preview of the Huddle landing page. - Static website",
@@ -39,7 +48,7 @@ export let projectsData = [
       "https://github.com/Andrei-TC/GitHub/tree/main/challenges/huddle-landing-page-with-alternating-feature-blocks-master",
   },
   {
-    id: 4,
+    id: 5,
     name: "Preview chat application",
     imageMobile: "./images/preview-chat-app-mobile.png",
     description:
@@ -51,7 +60,7 @@ export let projectsData = [
       "https://github.com/Andrei-TC/GitHub/tree/main/challenges/chat-app-css-illustration-master",
   },
   {
-    id: 5,
+    id: 6,
     name: "Preview order summary card",
     imageMobile: "./images/preview-order-summary-card-mobile.png",
     description:
