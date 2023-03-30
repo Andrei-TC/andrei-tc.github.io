@@ -4,17 +4,17 @@ const sl = "./images/self.png";
 export let aboutData = [
   {
     company: "Electronic-Arts",
-    jobTitle: "Quality Assurrence",
+    jobTitle: "QV Analist I",
     jobIcon: ea,
-    jobDuration: "1 year+",
+    jobDuration: "2 year+",
     currentJob: true,
-    tools: ["Jira", "Jenkins", "BigQuery", "Firebase"],
+    tools: ["Jira", "Jenkins", "BigQuery", "Firebase", "Excel", "PowerPoint"],
   },
   {
     company: "Self learner",
     jobTitle: "Front-End Developer",
     jobIcon: sl,
-    jobDuration: "Under 1 year",
+    jobDuration: "1 year+",
     currentJob: false,
     tools: [
       "Visual Studio Code",
